@@ -1,0 +1,67 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@200;300;400;700;800&display=swap');
+
+// Variables
+//@import 'variables';
+//@import 'utilities';
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+@import "bt";
+
+$grays2: (
+    "gray-100": $gray-100,
+    "gray-200": $gray-200,
+    "gray-300": $gray-300,
+    "gray-400": $gray-400,
+    "gray-500": $gray-500,
+    "gray-600": $gray-600,
+    "gray-700": $gray-700,
+    "gray-800": $gray-800,
+    "gray-900": $gray-900) !default;
+
+$colorset: (
+    "blues": $blues,
+    "indigos":$indigos,
+    "purples":$purples,
+    "pinks":$pinks,
+    "reds":$reds,
+    "oranges":$oranges,
+    "yellows":$yellows,
+    "greens":$greens,
+    "teals":$teals,
+    "cyans":$cyans,
+    "grays":$grays2,
+);
+
+@each $key,
+$colors in $colorset {
+
+    @each $color,
+    $value in $colors {
+        .text-#{$color} {
+            color:#{$value};
+        }
+    }
+}
+
+@each $key,
+$colors in $colorset {
+
+    @each $color,
+    $value in $colors {
+        .bg-#{$color} {
+            background-color:#{$value};
+        }
+    }
+}
+
+@mixin gradient-bg($color: null) {
+    background-color: $color;
+    background-image: var(--#{$prefix}gradient);
+
+}
+
+@import "css";
+
+@import "datepicker";

@@ -1,0 +1,8 @@
+$utilities: map-merge($utilities, ("shadow": (property: box-shadow,
+                class: shadow,
+                values: (null: $box-shadow,
+                    sm: $box-shadow-sm,
+                    md: $box-shadow-md,
+                    lg: $box-shadow-lg,
+                    none: none,
+                ))));

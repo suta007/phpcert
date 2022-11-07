@@ -1,0 +1,30 @@
+{
+    "name": "suta007/php-cert",
+    "description": "Certificate Generate system",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Suta007\\PhpCert\\": "src/"
+        },
+        "files": [
+            "src/autoload.php"
+        ],
+        "classmap": [
+            "models/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Kritsadapong  Suta",
+            "email": "mr.suta@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "eftec/bladeone": "dev-master",
+        "symfony/dotenv": "6.2.x-dev",
+        "illuminate/database": "10.x-dev",
+        "illuminate/hashing": "10.x-dev",
+        "tecnickcom/tcpdf": "dev-main"
+    }
+}
