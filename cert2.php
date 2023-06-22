@@ -16,7 +16,6 @@ $year = $data->year;
 
 if ($data->sheet) {
     $tb_name = 'sheet_' . $year;
-	
     $sheet = new Sheet;
     $sheet->setTable($tb_name);
     $dbsheet = $sheet->where('certificate_id', $cid)->first();
@@ -159,4 +158,21 @@ if ($data->line >= 3) {
     $pdf->writeHTMLCell($MaxW, '', 0, $data->line3_top, $html, 0, 0, 0, true, 'C', true);
 }
 
-$pdf->Output('certificate.pdf', 'I');
+$pdf_out = $pdf->Output('certificate.pdf', 'S');
+$imagick = new Imagick();
+$imagick->setResolution(300,300); // eg 300, 300
+$imagick->readImageBlob($pdf_out);
+//$imagick->setImageFormat('pdf');    // for pdf use 'pdf'
+
+//header('Content-type: application/pdf');
+//header('Content-Disposition: attachment; filename="certificate.pdf"');
+$imagick->setImageFormat('jpg');
+$imagick->setImageCompressionQuality(80);
+header('Content-Type: image/jpeg');
+echo $imagick; // put to broswer
+/*
+$im = new imagick('file.pdf[0]');
+$im->setImageFormat('jpg');
+header('Content-Type: image/jpeg');
+echo $im;
+*/

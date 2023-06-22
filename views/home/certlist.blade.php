@@ -14,9 +14,11 @@
 			<tr>
 				<td class="text-center">{{ $data->i }}</td>
 				<td>{{ $data->name }}</td>
-				<td class="text-nowrap" style="width:1%">
+				<td style="width:1%" class="text-center text-nowrap">
 					<a href="/cert.php?cid={{ $cid }}&id={{ $data->id }}" class="btn btn-web btn-sm" target="_blank">
-						<i class="fa-solid fa-download me-2"></i>ดาวน์โหลด</a>
+						<i class="fa-solid fa-file-pdf me-2"></i>PDF</a>
+						<a href="/cert2.php?cid={{ $cid }}&id={{ $data->id }}" class="btn btn-web btn-sm" target="_blank">
+						<i class="fa-solid fa-file-image me-2"></i>JPG</a>
 				</td>
 			</tr>
 		@endforeach

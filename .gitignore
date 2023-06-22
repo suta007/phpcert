@@ -5,3 +5,5 @@ phpcert.7zip
 /node_modules
 /vendor
 /.vscode
+/test
+.env

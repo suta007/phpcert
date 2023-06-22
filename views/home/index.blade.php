@@ -3,7 +3,7 @@
 	<div class="rounded mt-2 shadow bg-white text-dark p-4 row">
 		<div class="col-auto mb-3">
 			@php
-				$startYear = 2565;
+				$startYear = 2566;
 				$thisYear = Date('Y') + 543;
 			@endphp
 			<select name="year" id="year" class="form-select">
@@ -22,8 +22,8 @@
 	<div id="newtable" class="mt-3 rounded shadow bg-white text-dark p-4 row">
 		<div class="text-center align-items-center justify-content-center" style="min-height: 50vh;">
 			<img src="/public/images/logo.png" height="200px;">
-			<div class="text-web fw-bold fs-4">{{ $_EVN['NAME'] }}</div>
-			<div>กรุณาเลือก องค์กร ปี และ กิจกรรม/โครงการ ที่ท่านต้องการค้นหาเกียรติบัตร</div>
+			<div class="text-web fw-bold fs-4">{{ $_ENV['NAME'] }}</div>
+			<div>กรุณาเลือก ปี และ กิจกรรม/โครงการ ที่ต้องการค้นหาเกียรติบัตร</div>
 		</div>
 	</div>
 @endsection

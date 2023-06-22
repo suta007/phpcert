@@ -44,7 +44,7 @@
 	<header class="mb-3">
 		<nav class="navbar navbar-expand-md navbar-dark bg-web">
 			<div class="container">
-				<a class="navbar-brand" href="/index.php"><img src="/public/images/logo.png" height="50" class="logo-invert me-2">{{ $_ENV['NAME'] }}</a>
+				<a class="navbar-brand" href="/index.php"><img src="/public/images/logo.png" height="50" class="me-2">{{ $_ENV['NAME'] }}</a>
 				<button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
