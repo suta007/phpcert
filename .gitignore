@@ -6,3 +6,5 @@ phpcert.7zip
 /vendor
 /.vscode
 .env
+/cache/*
+/bg/*
