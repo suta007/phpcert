@@ -53,7 +53,7 @@
 						<li class="nav-item">
 							<a class="nav-link" href="/index.php" aria-current="page">หน้าแรก</a>
 						</li>
-						@if ($_SESSION['ss_logined'] == true)
+						@if (@$_SESSION['ss_logined'] == true)
 							<li><a class="nav-link" href="admin/main.php">จัดการเกียรติบัตร</a></li>
 							<li><a class="nav-link" href="logout.php">ออกจากระบบ</a></li>
 						@else
@@ -92,8 +92,9 @@
 	<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
 
 	@yield('scriptfile')
-	<script></script>
+	<script>
 	@yield('script')
+	</script>
 </body>
 
 </html>

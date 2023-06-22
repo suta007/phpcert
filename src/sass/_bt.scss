@@ -14,13 +14,13 @@
 // Create your own map
 //#EB5353   #F9D923 #36AE7C #187498
 $custom-colors: (
-    "web": #36AE7C
+    "web": #070787
 );
 
 // Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
-
+@import "~bootstrap/scss/variables-dark";
 @import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/utilities";
