@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $tb_name = 'sheet_' . $year;
             $sheet = new Sheet;
             $sheet->setTable($tb_name);
-            $dbsheet = $sheet->where('certificate_id', $id)->first();
+            $dbsheet = $sheet->where('certificate_id', $cid)->first();
             if ($dbsheet === null) {
                 $result = null;
             } else {
